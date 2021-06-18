@@ -14,7 +14,9 @@ lazy val example = project
 lazy val facade = project
   .in(file("facade"))
   .settings(
-    scalaVersion := scalaV
+    scalaVersion := scalaV,
+    libraryDependencies += "org.scalameta" %%% "munit" % "0.7.26" % Test,
+    Test / scalaJSLinkerConfig ~= { _.withModuleKind(ModuleKind.CommonJSModule) }
   )
   .enablePlugins(ScalaJSPlugin)
 
