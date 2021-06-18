@@ -1,0 +1,35 @@
+name: release
+
+on:
+  push:
+    branches: ['**']
+    tags: [v*]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+      - name: Get js deps
+        run: npm install
+      - uses: olafurpg/setup-scala@v12
+      - name: Build js
+        run: sbt "example/fastLinkJS"
+
+      - name: Prepare folder
+        run: |
+          mkdir dist
+          cp -r node_modules dist/
+          cp example/dist_js/main.js dist/main.js
+      - name: Deploy
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: release
+          FOLDER: dist
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+         

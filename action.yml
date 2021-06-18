@@ -1,0 +1,14 @@
+name: 'scala-sample-action'
+inputs:
+  simpleString:
+    default: 'Scala actions!'
+  condition:
+    default: true
+  multiline:
+    default: >-
+      this sentence is very
+      long so I am breaking
+      over multiple lines
+runs:
+  using: 'node12'
+  main: 'main.js'
