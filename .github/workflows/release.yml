@@ -16,9 +16,10 @@ jobs:
       - name: Get js deps
         run: npm install
       - uses: olafurpg/setup-scala@v12
+      - name: Run unit tests
+        run: sbt test
       - name: Build js
         run: sbt "example/fastLinkJS"
-
       - name: Prepare folder
         run: |
           mkdir dist
