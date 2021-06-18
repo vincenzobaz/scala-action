@@ -30,6 +30,6 @@ object core extends js.Object:
 
   def startGroup(message: String): Unit = js.native
   def endGroup(): Unit = js.native
-  def group[A](name: String, p: () => js.Promise[A]): js.Promise[A] = js.native
+  def group[A](name: String, p: js.Function0[js.Promise[A]]): js.Promise[A] = js.native
 
   def saveState(name: String, content: js.Any): Unit = js.native
