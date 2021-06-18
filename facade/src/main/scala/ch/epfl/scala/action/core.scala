@@ -15,7 +15,7 @@ object InputOptions:
 object core extends js.Object:
   def getInput(name: String, inputParams: InputOptions = InputOptions.default): String = js.native
   def getBooleanInput(name: String, inputOptions: InputOptions = InputOptions.default): Boolean = js.native
-  def getMultilineInput(name: String, inputOptions: InputOptions = InputOptions.default): String = js.native
+  def getMultilineInput(name: String, inputOptions: InputOptions = InputOptions.default): js.Array[String] = js.native
   def setOutput(key: String, value: String): Unit = js.native
   def exportVariable(key: String, value: String): Unit = js.native
   def setSecret(name: String): Unit = js.native

@@ -12,11 +12,11 @@ import scala.concurrent.ExecutionContext.Implicits.global
   assert(core.getInput("simpleString") == "Scala actions!")
   assert(core.getBooleanInput("condition"))
 
-  assert(core.getMultilineInput("multiline") == 
-   """this sentence is very
-   |long so I am breaking
-   |over multiple lines
-    """.stripMargin
+  assert(core.getMultilineInput("multiline").toList == List(
+    "this sentence is very",
+    "long so I am breaking",
+    "over multiple lines"
+    )
   )
 
   core.setOutput("output1", "testaction")
