@@ -9,10 +9,10 @@ import scala.concurrent.ExecutionContext.Implicits.global
 
 @main def run =
   println("Hello world")
-  assert(core.getInput("simpleString") == "Scala actions!")
-  assert(core.getBooleanInput("condition"))
+  assert(core.getInput("simple string") == "Scala actions!")
+  assert(core.getBooleanInput("boolean condition"))
 
-  assert(core.getMultilineInput("multiline").toList == List(
+  assert(core.getMultilineInput("multiline string").toList == List(
     "this sentence is very",
     "long so I am breaking",
     "over multiple lines"

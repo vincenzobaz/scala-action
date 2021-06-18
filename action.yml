@@ -1,11 +1,17 @@
 name: 'scala-sample-action'
 description: "Example of action written in Scala"
 inputs:
-  simpleString:
+  simple_string:
+    description: a simple string
+    required: false
     default: 'Scala actions!'
-  condition:
+  boolean_condition:
+    description: a simple boolean
+    required: false
     default: true
-  multiline:
+  multiline_string:
+    description: a simple multiline_string
+    required: false
     default: >-
       this sentence is very
       long so I am breaking
