@@ -1,4 +1,5 @@
 name: 'scala-sample-action'
+description: "Example of action written in Scala"
 inputs:
   simpleString:
     default: 'Scala actions!'
