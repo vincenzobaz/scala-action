@@ -5,4 +5,4 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: vincenzobaz/scala-action@v0.1.1
+      - uses: vincenzobaz/scala-action@v0.1.2
