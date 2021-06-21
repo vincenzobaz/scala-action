@@ -2112,13 +2112,13 @@ $c_Lsample_Main$package$.prototype.run__V = (function() {
   var this$2 = $m_s_Console$();
   var this$3 = this$2.out__Ljava_io_PrintStream();
   this$3.java$lang$JSConsoleBasedPrintStream$$printString__T__V("Hello world\n");
-  if (($as_T($i_$0040actions$002fcore.getInput("simpleString")) !== "Scala actions!")) {
+  if (($as_T($i_$0040actions$002fcore.getInput("simple string")) !== "Scala actions!")) {
     $m_sr_Scala3RunTime$().assertFailed__E()
   };
-  if ((!$uZ($i_$0040actions$002fcore.getBooleanInput("condition")))) {
+  if ((!$uZ($i_$0040actions$002fcore.getBooleanInput("boolean condition")))) {
     $m_sr_Scala3RunTime$().assertFailed__E()
   };
-  var array = $i_$0040actions$002fcore.getMultilineInput("multiline");
+  var array = $i_$0040actions$002fcore.getMultilineInput("multiline string");
   var this$5 = $ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array);
   $m_sci_List$();
   var x = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(this$5);
@@ -2144,10 +2144,10 @@ $c_Lsample_Main$package$.prototype.run__V = (function() {
   $i_$0040actions$002fcore.startGroup("Test group");
   $i_$0040actions$002fcore.info("info message in group");
   $i_$0040actions$002fcore.endGroup();
-  $i_$0040actions$002fcore.group("Test async group", new $c_sjsr_AnonFunction0(((this$11) => (() => {
+  $i_$0040actions$002fcore.group("Test async group", ((this$11) => (() => {
     var f = $m_s_concurrent_Future$().apply__F0__s_concurrent_ExecutionContext__s_concurrent_Future(new $c_sjsr_AnonFunction0(((this$12) => (() => 3))(this$11)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor());
     return $m_sjs_js_JSConverters$JSRichFuture$().toJSPromise$extension__s_concurrent_Future__s_concurrent_ExecutionContext__sjs_js_Promise(f, $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
-  }))(this)));
+  }))(this));
   $i_$0040actions$002fcore.saveState("AState", ["Many Strings", "are here"])
 });
 var $d_Lsample_Main$package$ = new $TypeData().initClass({
